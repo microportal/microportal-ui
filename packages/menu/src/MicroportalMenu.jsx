@@ -1,7 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
-import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import InboxIcon from '@material-ui/icons/MoveToInbox'
@@ -17,32 +15,30 @@ class MicroportalMenu extends React.Component {
 
     render() {
         return (
-            <div>
-                <MenuList>
-                    <ListItem>
-                        <ListItemIcon>
-                            <InboxIcon/>
-                        </ListItemIcon>
-                        <ListItemText primary="Dashboard"/>
-                    </ListItem>
-                    <Link href={'/#/about'}>
-                        <MenuItem>
+                <div>
+                    <MenuList>
+                        <MenuItem to={'#/about'}>
                             <ListItemIcon>
-                                <StarIcon/>
+                                <InboxIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Services"/>
+                            <ListItemText primary="Dashboard"/>
                         </MenuItem>
-                    </Link>
-                </MenuList>
-            </div>
+                        <Link href={'/#/services'}>
+                            <MenuItem>
+                                <ListItemIcon>
+                                    <StarIcon/>
+                                </ListItemIcon>
+                                <ListItemText primary="Services"/>
+                            </MenuItem>
+                        </Link>
+                    </MenuList>
+                </div>
         )
     }
 }
 
 function mapStateToProps(state) {
-    return {
-        menus: state.menus,
-    }
+    return {menus: state.menus}
 }
 
 export default connect(mapStateToProps, null)(MicroportalMenu)
