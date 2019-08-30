@@ -1,8 +1,8 @@
 import {createStore} from 'redux'
 
 const initialState = {
-    message: undefined
-};
+    message: undefined,
+}
 
 function reducer(state = initialState, action) {
     switch (action.type) {

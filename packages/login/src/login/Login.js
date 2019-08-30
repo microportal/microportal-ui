@@ -57,7 +57,7 @@ class Login extends React.Component {
     }
 
     handleSubmit = event => {
-        event.preventDefault();
+        event.preventDefault()
         const form = {username: event.target.username.value, password: event.target.password.value}
         login(form).catch(error => {
             console.log(error)
@@ -86,7 +86,7 @@ class Login extends React.Component {
                             <InputLabel htmlFor="password">Password</InputLabel>
                             <Input name="password" type="password" id="password" autoComplete="current-password"/>
                         </FormControl>
-                        <Button type={"submit"} fullWidth variant="contained" color="primary"
+                        <Button type={'submit'} fullWidth variant="contained" color="primary"
                                 className={classes.submit}>
                             Sign in
                         </Button>
@@ -99,6 +99,6 @@ class Login extends React.Component {
 
 Login.propTypes = {
     classes: PropTypes.object.isRequired,
-};
+}
 
 export default withStyles(styles)(Login)

@@ -1,7 +1,7 @@
-import React from 'react';
-import {Provider} from 'react-redux';
-import Login from "./login/Login";
-import {setEventDistributor} from "./eventDistributor";
+import React from 'react'
+import {Provider} from 'react-redux'
+import Login from './login/Login'
+import {setEventDistributor} from './eventDistributor'
 
 export default class App extends React.Component {
 
@@ -15,7 +15,7 @@ export default class App extends React.Component {
     }
 
     componentDidCatch(error, info) {
-        console.log(error, info);
+        console.log(error, info)
     }
 
     render() {
@@ -27,6 +27,6 @@ export default class App extends React.Component {
             )
         }
 
-        return <div/>;
+        return <div/>
     }
 }

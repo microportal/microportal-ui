@@ -1,9 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {HashRouter, NavLink} from 'react-router-dom'
-
-import StarIcon from '@material-ui/icons/Star'
-import InboxIcon from '@material-ui/icons/MoveToInbox'
+import {HashRouter} from 'react-router-dom'
 import Routes from './main/Routes.jsx'
 import classNames from 'classnames'
 import {withStyles} from '@material-ui/core/styles'
@@ -18,12 +15,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import Badge from '@material-ui/core/Badge'
 import NotificationsIcon from '@material-ui/icons/Notifications'
-import MenuList from '@material-ui/core/MenuList'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import Link from '@material-ui/core/Link'
-import MenuItem from '@material-ui/core/MenuItem'
-import ListItemText from '@material-ui/core/ListItemText'
 
 const drawerWidth = 240
 
@@ -162,27 +153,6 @@ class Commons extends React.Component {
                         <div>
                             <div id={'menu-ui'}>Loading menu</div>
                         </div>
-
-                        <Divider/>
-                        <MenuList>
-                            <Link to={'/'}>
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <InboxIcon/>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Dashboard"/>
-                                </ListItem>
-                            </Link>
-                            <NavLink to='/about' >
-                                <MenuItem selected={true}>
-                                    <ListItemIcon>
-                                        <InboxIcon/>
-                                    </ListItemIcon>
-                                    <ListItemText primary="About"/>
-                                </MenuItem>
-                            </NavLink>
-                        </MenuList>
-                        <Divider/>
                     </Drawer>
 
                     <main className={classes.content}>
